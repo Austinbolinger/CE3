@@ -36,6 +36,18 @@ Moore: The testbench out put results that match the given expected results. Also
 
 Mealy: The testbench out put results include a next floor now. Looking at the testbench, you can see that with the same test bench code, the elevator preforms the same functions as far as going up a floor waiting and continuing up. But, this code also allows for a prediction. The next floor is half a clock cycle ahead of the current floor. Meaning, when on floor one, the next floor reads "floor 2" as long as the "go up" command is next. When the current floor is, say 2, and the input is "stop", the next floor reads the current floor, like 2. This seems to make sense that the testbench has the next floor  a cycle ahead of the current floor.`
 
+
+###Questions
+--Question: is reset synchronous or asynchronous? 
+ The synchronous because the reset only gets looked at if the clk changes.
+ --Question: Will it(next-state process)  be different from your Moore Machine?
+ No.
+ --Question: What is the clock frequency? 
+ 100Mhz
+ --Question: What value would we set to simulate a 50MHz clock?
+ 20ns
+
+
 ####Test
 
 
